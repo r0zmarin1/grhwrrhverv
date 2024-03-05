@@ -1,0 +1,28 @@
+﻿<Window x:Class="grhwrrh.WindowNewMom"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:grhwrrh"
+        mc:Ignorable="d"
+        Title="WindowNewMom" Height="450" Width="800" Background="LightSteelBlue">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Grid.Column="1" Grid.Row="1"  Text="{Binding Mom.Name}"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Mom.Description}"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Mom.Price}"/>
+        <!--<TextBox Grid.Column="1" Grid.Row="4" Text="{Binding Mom.Image}"/>-->
+    </Grid>
+</Window>

@@ -5,7 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:grhwrrh"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="CornflowerBlue"> 
+    <Window.Resources>
+                <DataTemplate DataType="{x:Type local:GPU}">
+                    <StackPanel>
+                        <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
+                <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
+                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+            </StackPanel>
+
+                </DataTemplate>
+        <DataTemplate DataType="{x:Type local:CPU}">
+            <StackPanel>
+                <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
+                <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
+                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:RAM}">
+            <StackPanel>
+                <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
+                <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
+                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+            </StackPanel>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type local:Mom}">
+            <StackPanel>
+                <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
+                <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
+                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -19,24 +54,14 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Width="100" Source="C:\Users\Student\source\repos\grhwrrh\grhwrrh\1.jpg" Grid.RowSpan="2"/>
-        <Label Content="Барахолка ППК" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Blue" FontFamily="Century"/>
-        <TabControl Grid.Row="2" Grid.RowSpan="3"  Grid.ColumnSpan="5">
-            <TabControl.Resources>
-                <DataTemplate DataType="{x:Type local:PPK}">
-                    <StackPanel>
-                        <Image Width="200" Source="{Binding Image}" Height="100"/>
-                        <TextBlock FontWeight="Bold" Text="{Binding Name}"/>
-                    </StackPanel>
+        <Image Width="100" Source="C:\Users\Student\source\repos\grhwrrh\grhwrrh\1.jpg" />
+        <Label Content="Барахолка ППК" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2" 
+               FontSize="70" HorizontalAlignment="Center"  
+               Foreground="Blue" FontFamily="Century"/>
+        <ListBox HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2"  ItemsSource="{Binding Items}" Background="LightGray"/>
 
-                </DataTemplate>
-            </TabControl.Resources>
-            <TabItem Header="GPU">
-                
-            </TabItem>
-        </TabControl>
-    </Grid>
+        <Button Content="Add" Grid.Row="2" Grid.Column="3"  Click="Button_Click" Background="Wheat" />
+    </Grid> 
+   
 </Window>

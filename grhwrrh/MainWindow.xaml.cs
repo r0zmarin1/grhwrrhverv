@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.IO;
 using System.Security.Cryptography.Pkcs;
 using System.Text;
 using System.Windows;
@@ -18,14 +20,20 @@ namespace grhwrrh
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<object> Items { get; set; } = new();
+        public ObservableCollection<object> Items { get; set; } = new();
+
+        
         public MainWindow()
         {
             InitializeComponent();
-            Items.Add(new PPK { Name = "RTX3060", Description = "короче ваще классная жесть", Price = 40002, Image = File.ReadAllBytes("1.jpg") });
+            //Items.Add(new GPU { Name = "RTX3060", Description = "короче ваще классная жесть", Price = 40002, Image = File.ReadAllBytes("1.jpg") });
             DataContext = this;
         }
 
-        
-
-    }}
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AddWindow addWindow = new AddWindow(Items);
+            addWindow.Show();
+        }
+    }
+}
