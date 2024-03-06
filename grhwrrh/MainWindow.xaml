@@ -7,37 +7,41 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background="CornflowerBlue"> 
     <Window.Resources>
+        <local:ConverterCPU x:Key="converterCPU"/>
+        <local:ConverterGPU x:Key="converterGPU"/>
+        <local:ConverterMom x:Key="converterMom"/>
+        <local:ConverterRAM x:Key="converterRAM"/>
                 <DataTemplate DataType="{x:Type local:GPU}">
-                    <StackPanel>
-                        <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
+            <StackPanel>
                 <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
-                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
-                        <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+                <Image Source="{Binding Price, Converter = {StaticResource converterGPU}}" Width="200"/>
             </StackPanel>
 
                 </DataTemplate>
         <DataTemplate DataType="{x:Type local:CPU}">
             <StackPanel>
-                <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
                 <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
-                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold"/>
                 <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+                <Image Source="{Binding Price, Converter = {StaticResource converterCPU}}" Width="200"/>
             </StackPanel>
         </DataTemplate>
         <DataTemplate DataType="{x:Type local:RAM}">
             <StackPanel>
-                <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
                 <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
-                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Description}" TextAlignment="Center"  TextWrapping="Wrap" FontWeight="Bold"/>
                 <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+                <Image Source="{Binding Price, Converter = {StaticResource converterRAM}}" Width="200"/>
             </StackPanel>
         </DataTemplate>
         <DataTemplate DataType="{x:Type local:Mom}">
             <StackPanel>
-                <!--<Image Width="200" Source="{Binding Image}" Height="100"/>-->
                 <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
-                <TextBlock Text="{Binding Description}" TextAlignment="Center" FontWeight="Bold"/>
+                <TextBlock Text="{Binding Description}" TextWrapping="Wrap" TextAlignment="Center" FontWeight="Bold"/>
                 <TextBlock Text="{Binding Price}" TextAlignment="Right" FontWeight="Bold" FontSize="20"/>
+                <Image Source="{Binding Price, Converter = {StaticResource converterMom}}" Width="200"/>
             </StackPanel>
         </DataTemplate>
     </Window.Resources>
@@ -61,7 +65,7 @@
                Foreground="Blue" FontFamily="Century"/>
         <ListBox HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2"  ItemsSource="{Binding Items}" Background="LightGray"/>
 
-        <Button Content="Add" Grid.Row="2" Grid.Column="3"  Click="Button_Click" Background="Wheat" />
+        <Button Content="Add" Grid.Row="2" Grid.Column="3"  Click="Button_Click" Background="MediumPurple" />
     </Grid> 
    
 </Window>
