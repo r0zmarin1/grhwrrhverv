@@ -13,25 +13,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace grhwrrh
+namespace grhwrrh.View
 {
     /// <summary>
-    /// Логика взаимодействия для WindowNewGPU.xaml
+    /// Логика взаимодействия для WindowNewMom.xaml
     /// </summary>
-    public partial class WindowNewGPU : Window
+    public partial class WindowNewMom : Window
     {
-
         private readonly ObservableCollection<object> items;
 
-        public GPU GPU { get; set; } = new GPU();
+        public Mom Mom { get; set; } = new Mom();
 
-        public WindowNewGPU(System.Collections.ObjectModel.ObservableCollection<object> items)
+        public WindowNewMom(System.Collections.ObjectModel.ObservableCollection<object> items)
         {
             InitializeComponent();
             DataContext = this;
             this.items = items;
 
         }
-       
+      
     }
 }

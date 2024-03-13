@@ -7,9 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace grhwrrh
+
+namespace grhwrrh.Converter
 {
-    public class ConverterRAM : IValueConverter
+    public class ConverterGPU : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -17,11 +18,11 @@ namespace grhwrrh
             int val = int.Parse(value.ToString());
             if (val > 10000)
             {
-                image = File.ReadAllBytes("8.jpg");
+                image = File.ReadAllBytes("4.png");
             }
             if (val < 10000)
             {
-                image = File.ReadAllBytes("9.jpg");
+                image = File.ReadAllBytes("5.jpg");
             }
             return image;
         }

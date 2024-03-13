@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace grhwrrh
+namespace grhwrrh.Converter
 {
-    public class ConverterGPU : IValueConverter
+    public class ConverterCPU : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -17,14 +17,16 @@ namespace grhwrrh
             int val = int.Parse(value.ToString());
             if (val > 10000)
             {
-                image = File.ReadAllBytes("4.png");
+                image = File.ReadAllBytes("3.jpg");
             }
             if (val < 10000)
             {
-                image = File.ReadAllBytes("5.jpg");
+                image = File.ReadAllBytes("2.jpg");
             }
             return image;
+
         }
+
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {

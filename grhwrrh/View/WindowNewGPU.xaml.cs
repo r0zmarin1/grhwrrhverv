@@ -13,24 +13,25 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace grhwrrh
+namespace grhwrrh.View
 {
     /// <summary>
-    /// Логика взаимодействия для WindowNewRAM.xaml
+    /// Логика взаимодействия для WindowNewGPU.xaml
     /// </summary>
-    public partial class WindowNewRAM : Window
+    public partial class WindowNewGPU : Window
     {
+
         private readonly ObservableCollection<object> items;
 
-        public RAM RAM { get; set; } = new RAM();
+        public GPU GPU { get; set; } = new GPU();
 
-        public WindowNewRAM(System.Collections.ObjectModel.ObservableCollection<object> items)
+        public WindowNewGPU(System.Collections.ObjectModel.ObservableCollection<object> items)
         {
             InitializeComponent();
             DataContext = this;
             this.items = items;
 
         }
-      
+       
     }
 }

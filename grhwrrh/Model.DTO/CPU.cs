@@ -1,4 +1,4 @@
-﻿namespace grhwrrh
+﻿namespace grhwrrh.Model.DTO
 {
     public class CPU
         {

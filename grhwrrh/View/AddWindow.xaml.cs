@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace grhwrrh
+namespace grhwrrh.View
 {
     /// <summary>
     /// Логика взаимодействия для AddWindow.xaml
@@ -41,8 +41,6 @@ namespace grhwrrh
             WindowNewCPU windowNewCPU = new WindowNewCPU(items);
             windowNewCPU.ShowDialog();
             items.Add(windowNewCPU.CPU);
-
-            
 
         }
 

@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace grhwrrh
+namespace grhwrrh.Converter
 {
     public class ConverterMom : IValueConverter
     {

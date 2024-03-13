@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace grhwrrh
+namespace grhwrrh.Model.DTO
 {
-    public class GPU
+    public class Mom
     {
         public string Name { get; set; }
         public string Description { get; set; }

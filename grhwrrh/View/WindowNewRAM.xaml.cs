@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,25 +13,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace grhwrrh
+namespace grhwrrh.View
 {
     /// <summary>
-    /// Логика взаимодействия для WindowNewCPU.xaml
+    /// Логика взаимодействия для WindowNewRAM.xaml
     /// </summary>
-    public partial class WindowNewCPU : Window
+    public partial class WindowNewRAM : Window
     {
         private readonly ObservableCollection<object> items;
 
-        public CPU CPU { get; set; } = new CPU();
+        public RAM RAM { get; set; } = new RAM();
 
-        public WindowNewCPU(System.Collections.ObjectModel.ObservableCollection<object> items)
+        public WindowNewRAM(System.Collections.ObjectModel.ObservableCollection<object> items)
         {
             InitializeComponent();
             DataContext = this;
             this.items = items;
 
         }
-
       
     }
 }

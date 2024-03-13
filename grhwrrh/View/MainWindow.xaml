@@ -1,16 +1,20 @@
-﻿<Window x:Class="grhwrrh.MainWindow"
+﻿<Window x:Class="grhwrrh.View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:grhwrrh"
+        xmlns:vm="clr-namespace:grhwrrh.ViewModel"
+        xmlns:local="clr-namespace:grhwrrh.Model.DTO"
+        xmlns:conv="clr-namespace:grhwrrh.Converter"
         mc:Ignorable="d"
+        DataContext="{DynamicResource vm}"
         Title="MainWindow" Height="450" Width="800" Background="CornflowerBlue"> 
     <Window.Resources>
-        <local:ConverterCPU x:Key="converterCPU"/>
-        <local:ConverterGPU x:Key="converterGPU"/>
-        <local:ConverterMom x:Key="converterMom"/>
-        <local:ConverterRAM x:Key="converterRAM"/>
+        <vm:MainWindowVM x:Key="vm"/>
+        <conv:ConverterCPU x:Key="converterCPU"/>
+        <conv:ConverterGPU x:Key="converterGPU"/>
+        <conv:ConverterMom x:Key="converterMom"/>
+        <conv:ConverterRAM x:Key="converterRAM"/>
                 <DataTemplate DataType="{x:Type local:GPU}">
             <StackPanel>
                 <TextBlock TextAlignment="Center" FontWeight="Bold" Text="{Binding Name}"/>
