@@ -24,7 +24,7 @@ namespace grhwrrh.View
 
         public AddWindow(System.Collections.ObjectModel.ObservableCollection<object> items)
         {
-            InitializeComponent();
+            /*InitializeComponent()*/;
             DataContext = this;
             this.items = items;
         }
