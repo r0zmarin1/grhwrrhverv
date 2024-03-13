@@ -68,8 +68,7 @@
                FontSize="70" HorizontalAlignment="Center"  
                Foreground="Blue" FontFamily="Century"/>
         <ListBox HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2"  ItemsSource="{Binding Items}" Background="LightGray"/>
-
-        <Button Content="Add" Grid.Row="2" Grid.Column="3"  Click="Button_Click" Background="MediumPurple" />
+        <Button Content="Add" Grid.Row="2" Grid.Column="3" Command="{Binding OpenAddWindow}" Background="MediumPurple" />
     </Grid> 
    
 </Window>

@@ -1,4 +1,4 @@
-﻿<Window x:Class="grhwrrh.WindowNewCPU"
+﻿<Window x:Class="grhwrrh.View.WindowNewCPU"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -23,7 +23,5 @@
         <TextBox Grid.Column="1" Grid.Row="1"  Text="{Binding CPU.Name}"/>
         <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding CPU.Description}"/>
         <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding CPU.Price}"/>
-        <!--<TextBox Grid.Column="1" Grid.Row="4" Text="{Binding CPU.Image}"/>-->
-   
     </Grid>
 </Window>

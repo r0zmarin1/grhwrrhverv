@@ -1,4 +1,6 @@
-﻿using System;
+﻿using grhwrrh.Model.DTO;
+using grhwrrh.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -19,16 +21,12 @@ namespace grhwrrh.View
     /// Логика взаимодействия для WindowNewMom.xaml
     /// </summary>
     public partial class WindowNewMom : Window
-    {
-        private readonly ObservableCollection<object> items;
-
-        public Mom Mom { get; set; } = new Mom();
-
-        public WindowNewMom(System.Collections.ObjectModel.ObservableCollection<object> items)
+    {    
+        public Mom NewMom { get; set; }
+        public WindowNewMom()
         {
             InitializeComponent();
-            DataContext = this;
-            this.items = items;
+            DataContext = this; 
 
         }
       

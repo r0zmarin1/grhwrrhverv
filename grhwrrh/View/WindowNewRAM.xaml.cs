@@ -1,4 +1,6 @@
-﻿using System;
+﻿using grhwrrh.Model.DTO;
+using grhwrrh.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -19,17 +21,12 @@ namespace grhwrrh.View
     /// Логика взаимодействия для WindowNewRAM.xaml
     /// </summary>
     public partial class WindowNewRAM : Window
-    {
-        private readonly ObservableCollection<object> items;
-
-        public RAM RAM { get; set; } = new RAM();
-
-        public WindowNewRAM(System.Collections.ObjectModel.ObservableCollection<object> items)
+    {      
+        public RAM NewRAM {  get; set; }
+        public WindowNewRAM()
         {
             InitializeComponent();
             DataContext = this;
-            this.items = items;
-
         }
       
     }

@@ -29,10 +29,5 @@ namespace grhwrrh.ViewModel
         {
             action();
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            AddWindow addWindow = new AddWindow(items);
-            addWindow.Show();
-        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using grhwrrh.Model.DTO;
+using grhwrrh.View;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,7 +14,20 @@ namespace grhwrrh.ViewModel
     {
         public ObservableCollection<object> Items { get; set; } = new();
 
+        public CommandVM OpenAddWindow { get; }
 
+        public MainWindowVM()
+        {
+            OpenAddWindow = new CommandVM(() =>
+            {
+                AddWindow win = new AddWindow(Items);
+                win.ShowDialog();
+            });
+        }
     }
+
+  
+
+
 
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using grhwrrh.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -20,43 +21,10 @@ namespace grhwrrh.View
     /// </summary>
     public partial class AddWindow : Window
     {
-        private readonly ObservableCollection<object> items;
-
         public AddWindow(System.Collections.ObjectModel.ObservableCollection<object> items)
         {
-            /*InitializeComponent()*/;
-            DataContext = this;
-            this.items = items;
+            InitializeComponent();
+            DataContext = new AddWindowVM(items);
         }
-
-        private void GpuAdd(object sender, RoutedEventArgs e)
-        {
-            WindowNewGPU windowNewGPU = new WindowNewGPU(items);
-            windowNewGPU.ShowDialog();
-            items.Add(windowNewGPU.GPU);
-        }
-
-        private void CpuAdd(object sender, RoutedEventArgs e)
-        {
-            WindowNewCPU windowNewCPU = new WindowNewCPU(items);
-            windowNewCPU.ShowDialog();
-            items.Add(windowNewCPU.CPU);
-
-        }
-
-        private void RAMAdd(object sender, RoutedEventArgs e)
-        {
-            WindowNewRAM windowNewRAM = new WindowNewRAM(items);
-            windowNewRAM.ShowDialog();
-            items.Add(windowNewRAM.RAM);
-        }
-
-        private void MomAdd(object sender, RoutedEventArgs e)
-        {
-            WindowNewMom windowNewMom = new WindowNewMom(items);
-            windowNewMom.ShowDialog();
-            items.Add(windowNewMom.Mom);
-        }
-
     }
 }

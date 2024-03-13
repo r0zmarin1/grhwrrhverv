@@ -1,7 +1,10 @@
-﻿using System;
+﻿using grhwrrh.Model.DTO;
+using grhwrrh.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -20,17 +23,12 @@ namespace grhwrrh.View
     /// </summary>
     public partial class WindowNewGPU : Window
     {
+        public GPU NewGPU { get; set; }
 
-        private readonly ObservableCollection<object> items;
-
-        public GPU GPU { get; set; } = new GPU();
-
-        public WindowNewGPU(System.Collections.ObjectModel.ObservableCollection<object> items)
+        public WindowNewGPU()
         {
             InitializeComponent();
             DataContext = this;
-            this.items = items;
-
         }
        
     }

@@ -20,14 +20,9 @@ namespace grhwrrh.View
     /// </summary>
     public partial class MainWindow : Window
     {
-        //public ObservableCollection<object> Items { get; set; } = new();
-
-
-        //public MainWindow()
-        //{
-        //    InitializeComponent();
-
-        //}
-
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
     }
 }
