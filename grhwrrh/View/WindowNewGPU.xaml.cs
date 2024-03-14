@@ -23,7 +23,7 @@ namespace grhwrrh.View
     /// </summary>
     public partial class WindowNewGPU : Window
     {
-        public GPU NewGPU { get; set; }
+        public GPU NewGPU { get; set; } = new();
 
         public WindowNewGPU()
         {

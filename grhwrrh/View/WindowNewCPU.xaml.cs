@@ -24,7 +24,7 @@ namespace grhwrrh.View
     /// </summary>
     public partial class WindowNewCPU : Window
     {
-        public CPU NewCPU { get; set; }
+        public CPU NewCPU { get; set; } = new();
 
         public WindowNewCPU()
         {

@@ -22,7 +22,7 @@ namespace grhwrrh.View
     /// </summary>
     public partial class WindowNewMom : Window
     {    
-        public Mom NewMom { get; set; }
+        public Mom NewMom { get; set; } = new();
         public WindowNewMom()
         {
             InitializeComponent();

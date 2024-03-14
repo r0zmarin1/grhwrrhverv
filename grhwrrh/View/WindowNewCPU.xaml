@@ -20,8 +20,8 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Column="1" Grid.Row="1"  Text="{Binding CPU.Name}"/>
-        <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding CPU.Description}"/>
-        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding CPU.Price}"/>
+        <TextBox Grid.Column="1" Grid.Row="1"  Text="{Binding NewCPU.Name}"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding NewCPU.Description}"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding NewCPU.Price}"/>
     </Grid>
 </Window>

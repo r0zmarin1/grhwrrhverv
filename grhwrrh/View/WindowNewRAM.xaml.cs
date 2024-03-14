@@ -22,7 +22,7 @@ namespace grhwrrh.View
     /// </summary>
     public partial class WindowNewRAM : Window
     {      
-        public RAM NewRAM {  get; set; }
+        public RAM NewRAM {  get; set; } = new();
         public WindowNewRAM()
         {
             InitializeComponent();
